@@ -18,6 +18,8 @@ public class CameraMover : MonoBehaviour
 
     private void Move()
     {
+        _targetPosition.z = transform.position.z;
+
         if (Input.GetMouseButtonDown(0)) _startPosition = transform.position + _camera.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButton(0))
         {
